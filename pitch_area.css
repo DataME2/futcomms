@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #006400; /* Grass green background */
+}
+
+.pitch {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #228B22;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.center-line {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-spot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.penalty-area {
+    position: absolute;
+    width: 120px;
+    height: 240px;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.penalty-area.left {
+    left: 0;
+    border-left: none;
+}
+
+.penalty-area.right {
+    right: 0;
+    border-right: none;
+}
+
+.goal-area {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.penalty-area.left .goal-area {
+    left: 0;
+    border-left: none;
+}
+
+.penalty-area.right .goal-area {
+    right: 0;
+    border-right: none;
+}
+
+/* Referees */
+.referee {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+/* Main referee */
+.referee.main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Assistant referee 2 (wide upper-half field) */
+.referee.assistant2 {
+    top: 120%; /* Midway in the down half */
+    left: 95%; /* Near the right edge of the pitch */
+    transform: translate(-500%,-700%);
+}
+
+/* Assistant referee 1 (wide lower-half field) */
+.referee.assistant1 {
+    top: -3%; /* Midway in the upper half */
+    left: 5%; /* Near the left edge of the pitch */
+    transform: translate(-75%, -50%);
+}
+
+/* Fourth referee (halfway along the center line outside the pitch) */
+.referee.fourth {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Different color for distinction */
+    border-radius: 50%;
+    top: -6%; /* Aligned with the center line */
+    left: 50%; /* Slightly outside the pitch on the right side */
+    transform: translate(-50%, -50%);
+}

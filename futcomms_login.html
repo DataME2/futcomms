@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutComms Login</title>
+  <link rel="stylesheet" href="futcomms_login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>FUTCOMMS</h1>
+    <h2>Login</h2>
+    
+    <button id="google-login" onclick="signInWithGoogle()">Sign in with Google</button>
+    <p class="separator">— or sign in with —</p>
+    
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" id="login-button">Log In</button>
+    </form>
+    
+    <a href="#" id="forgot-password">Forgot password</a>
+    <p class="app-version">App v: 1.0</p>
+  </div>
+  
+  <script src="futcomms_login.js"></script>
+</body>
+</html>
